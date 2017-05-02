@@ -1,19 +1,53 @@
+/*---------------------------
+            font
+---------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+/*---------------------------
+            css
+---------------------------*/
+
 body, html{
   height: 100%;
   width: 100%;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .site-header {
-
   width: 100%;
+
+}
+.site-header__list {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
+.site-header-logo {
+  width: 250px;
+}
+.logo-left{
+  margin-left: 5%;
+}
 .wrapper {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   float: center;
 }
-
+.caption{
+  font-family: "Book Antiqua", 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  -webkit-margin-before: 0 !important;
+  -webkit-margin-after: 0 !important;
+}
+.logo{
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-style: italic;
+  -webkit-margin-after: 0 !important;
+}
 section {
   position: absolute;
   top: 0;
@@ -31,11 +65,12 @@ section img{
 }
 
 li {
+  font-family: 'Inconsolata', monospace;
   font-size: 1.5rem;
-  display: inline-block;
+  list-style-type: none;
   padding: 1rem;
 }
 ul{
-  float: right;
   -webkit-padding-start: 0px !important;
+  width: 100%;
 }
