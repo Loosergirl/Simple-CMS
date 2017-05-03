@@ -18,6 +18,12 @@
       font-size: 1.5rem;
       list-style-type: none;
       padding: 1rem;
+
+      @mixin {
+        (min-width: 800px) {
+          font-size: 1rem;
+        }
+      }
     }
 
     &__logo{
@@ -28,7 +34,7 @@
     }
 
     &__logo-left{
-      margin-left: 5%;
+
     }
 
     &__logo-caption{
@@ -48,6 +54,7 @@
       z-index: -1;
 
       img {
+          display: block;
           top: -50;
           }
         }

@@ -15,7 +15,7 @@
           </ul>
         </nav>
     </div>
+    </header>
     <section class="site-header__jumbotron">
       <img srcset="images/skyscraper-large1.png 1920w" alt="Photo of skyscraper">
     </section>
-    </header>
