@@ -83,3 +83,10 @@ body, html{
   top: 0;
   z-index: -1;
 }
+
+.divider {
+	background-color: #95989A;
+	text-align: center;
+	width: 90%;
+	height: 2px;
+}
