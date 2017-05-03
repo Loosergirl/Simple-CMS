@@ -1,0 +1,24 @@
+{
+  "name": "simple-cms",
+  "version": "1.0.0",
+  "description": "Group assignment to create a simple CMS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loosergirl/Simple-CMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loosergirl/Simple-CMS/issues"
+  },
+  "homepage": "https://github.com/Loosergirl/Simple-CMS#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "sass": "^0.5.0"
+  }
+}
