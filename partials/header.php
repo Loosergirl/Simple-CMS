@@ -1,4 +1,3 @@
-  <body>
     <header class="site-header">
       <div class="wrapper">
         <div class="site-header__logo-left">
@@ -19,5 +18,5 @@
               <div class="site-header__bottom-line"></div>
     </header>
     <section class="site-header__jumbotron">
-      <img srcset="images/skyscraper-large1.png 1920w" alt="Photo of skyscraper">
+      <img srcset="images/header-large.jpg" alt="Photo of skyscraper">
     </section>
