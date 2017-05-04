@@ -1,0 +1,37 @@
+.post-container {
+  display: block;
+  max-width: 1200px;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  &__header {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  &__figure {
+    margin: 0;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    /*width: 1013px;
+    height: 500px;*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__image-text {
+    font-style: italic;
+  }
+  &__text {
+    text-align: center;
+    padding: 20px 30px;
+
+  }
+}
