@@ -1,4 +1,4 @@
-<?php
+ <?php
   include 'partials/head.php';
   include 'partials/error.php';
   include 'partials/header.php';

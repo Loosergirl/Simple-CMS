@@ -31,7 +31,7 @@
       font-style: italic;
       margin-top: 15px;
       -webkit-margin-after: 0 !important;
-      color: red;
+      color: $mainGrey;
 
       @media screen and (min-width: $atSmall) {
           font-size: 1rem;
