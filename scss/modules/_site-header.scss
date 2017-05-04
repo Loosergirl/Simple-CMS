@@ -19,10 +19,6 @@
       list-style-type: none;
       padding: 1rem;
 
-      @media screen and (min-width: $atSmall) {
-          display: none;
-
-      }
       @media screen and (max-width: $atMedium) {
           font-size: 1rem;
           padding: 0.5rem;
@@ -35,7 +31,7 @@
       font-style: italic;
       margin-top: 15px;
       -webkit-margin-after: 0 !important;
-      color: $mainGrey;
+      color: red;
 
       @media screen and (min-width: $atSmall) {
           font-size: 1rem;

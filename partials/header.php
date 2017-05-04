@@ -1,4 +1,3 @@
-  <body>
     <header class="site-header">
       <div class="wrapper">
         <div class="site-header__logo-left">

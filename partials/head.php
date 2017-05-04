@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,3 +7,4 @@
     <title>Architect Blog</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
+<body>
