@@ -1,6 +1,7 @@
 * Database: Ny PDO
-* Login: Konstruktor tar pdo som argument. Funktion som hämtar alla users och kollar om username = :username och sparar den i $_POST.
+* Login: Konstruktor tar pdo som argument. Funktion som hämtar alla users, sparar dem i $_POST.
 * Post: Pdo som konstruktorargument. Funktioner för att (a) lägga upp en post och (b) hämta alla posts som en ASSOC-array.
+* Date: Returnerar bara datumet.
 
 * error: Felhantering
 * head: HTML-head + php session_start()

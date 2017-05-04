@@ -1,13 +1,14 @@
 <?php
 class Post
 {
-	public function __construct($pdo)
+	public function __construct($pdo, $timestamp)
 	{
 		$this->pdo = $pdo;
+		$this->timestamp = $timestamp;
 	}
 	
 	public function postPost()
-	{
+	{	
 		$statement = $this->pdo->prepare(
 			"INSERT INTO `blog_posts`
 			(postTitle, postCont, postDate, memberID, pictureSRC)
