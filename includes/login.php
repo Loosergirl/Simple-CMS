@@ -21,4 +21,3 @@ if(isset($_POST['btn-login']))
   $error = "Wrong Details !";
  } 
 }
-?>
