@@ -1,10 +1,19 @@
+===PHP CLASSES===
+Här ska klasser ligga
 * Database: Ny PDO
 * Login: Konstruktor tar pdo som argument. Funktion som hämtar alla users, sparar dem i $_POST.
 * Post: Pdo som konstruktorargument. Funktioner för att (a) lägga upp en post och (b) hämta alla posts som en ASSOC-array.
 * Date: Returnerar bara datumet.
 
+===PARTIALS===
+PHP som är HTML
 * error: Felhantering
 * head: HTML-head + php session_start()
 * footer: sluta body & html-taggar (JavaScript ska länkas här)
 * header: HTML för header
 * form: HTML för en form för att skriva blog posts
+
+===INCLUDES===
+Här ska all annan PHP ligga
+* login.php: Login... SÄTT IHOP MED FORM
+* sign-in-up.php
