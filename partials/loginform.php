@@ -1,3 +1,4 @@
+<?php include '../includes/login.php';  ?>
 <form method="post">
             <h2>Sign in.</h2><hr />
             <?php
@@ -23,5 +24,5 @@
                 </button>
             </div>
             <br />
-            <label>Don't have account yet ! <a href="sign-up.php">Sign Up</a></label>
+            <label>Don't have account yet ! <a href="signuppage.php">Sign Up</a></label>
 </form>

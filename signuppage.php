@@ -1,5 +1,5 @@
  <?php
   include 'partials/loginhead.php';
-  include 'partials/loginform.php';
+  include 'partials/signupform.php';
   include 'partials/footer.php';
  ?>

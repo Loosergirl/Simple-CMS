@@ -13,7 +13,7 @@
             <ul class="site-header__list">
               <li class="site-header__listItem"><a href="blog.php">Blog</a></li>
               <li class="site-header__listItem"><a href="contact.php">Contact</a></li>
-              <li class="site-header__listItem"><a href="#">Register / Log in</a></li>
+              <li class="site-header__listItem"><a href="loginpage.php">Register / Log in</a></li>
             </ul>
           </nav>
         </div>
