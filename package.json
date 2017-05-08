@@ -17,8 +17,15 @@
   },
   "homepage": "https://github.com/Loosergirl/Simple-CMS#readme",
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
-    "sass": "^0.5.0"
+    "sass": "^0.5.0",
+    "webpack": "^2.5.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }

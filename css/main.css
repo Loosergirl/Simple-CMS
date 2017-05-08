@@ -29,62 +29,79 @@ a {
 
 .site-header {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   /*&__bottom-line {
         height: 1px;
         background: $mainGrey;
         width: 90%;
         margin: 0 auto;
     }*/ }
+  .site-header__menu-icon {
+    position: absolute;
+    width: 40px;
+    height: 19px;
+    top: 30px;
+    left: 30px;
+    z-index: 10; }
+    .site-header__menu-icon::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 20px;
+      height: 3px;
+      top: 0;
+      left: 0;
+      transform-origin: 0 0;
+      transition: transform .3s ease-out; }
+    .site-header__menu-icon__middle {
+      position: absolute;
+      background-color: black;
+      width: 20px;
+      height: 3px;
+      top: 8px;
+      left: 0;
+      transition: all .3s ease-out;
+      transform-origin: 0 50%; }
+    .site-header__menu-icon::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 20px;
+      height: 3px;
+      top: 16px;
+      left: 0;
+      transform-origin: 0 100%;
+      transition: transform .3s ease-out; }
+  .site-header__menu-icon--close-x::before {
+    transform: rotate(45deg) scaleX(1.25); }
+  .site-header__menu-icon--close-x .site-header__menu-icon__middle {
+    opacity: 0; }
+  .site-header__menu-icon--close-x::after {
+    transform: rotate(-45deg) scaleX(1.25) translateY(1px); }
+  .site-header__menu-content {
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+    position: fixed;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 30%; }
+    .site-header__menu-content--is-visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1); }
   .site-header__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-padding-start: 0px !important;
-    width: 100%; }
-  .site-header__logo {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    font-style: italic;
-    margin-top: 15px;
-    -webkit-margin-after: 0 !important;
-    color: #95989A; }
-    @media screen and (min-width: 320px) {
-      .site-header__logo {
-        font-size: 1rem; } }
-    @media screen and (min-width: 640px) {
-      .site-header__logo {
-        font-size: 1.5rem; } }
-    @media screen and (min-width: 1200px) {
-      .site-header__logo {
-        font-size: 2rem; } }
-  .site-header__logo-line {
-    width: 100%;
-    height: 1.4px;
-    background-color: #95989A; }
-    @media screen and (max-width: 640px) {
-      .site-header__logo-line {
-        display: none; } }
-  .site-header__logo-caption {
-    font-family: "Book Antiqua", 'Merriweather', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1rem;
-    color: #95989A;
-    padding-top: 5px;
-    -webkit-margin-before: 0 !important;
-    -webkit-margin-after: 0 !important; }
-    @media screen and (max-width: 640px) {
-      .site-header__logo-caption {
-        display: none; } }
-    @media screen and (max-width: 1200px) {
-      .site-header__logo-caption {
-        font-size: 0.8rem;
-        padding-top: 3px; } }
+    flex-direction: column;
+    width: 50%; }
   .site-header__listItem {
     font-family: 'Inconsolata', monospace;
     font-size: 1.5rem;
@@ -99,6 +116,85 @@ a {
     @media screen and (min-width: 1200px) {
       .site-header__listItem {
         font-size: 1.2rem; } }
+    .site-header__listItem a {
+      color: #95989A; }
+  .site-header__logo {
+    margin: 10px auto; }
+  .site-header__logo-header-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0;
+    -webkit-margin-after: 0 !important;
+    color: #95989A; }
+    @media screen and (min-width: 320px) {
+      .site-header__logo-header-text {
+        font-size: 1rem; } }
+    @media screen and (min-width: 640px) {
+      .site-header__logo-header-text {
+        font-size: 1.5rem; } }
+    @media screen and (min-width: 1200px) {
+      .site-header__logo-header-text {
+        font-size: 2rem; } }
+  .site-header__logo-line {
+    width: 100%;
+    height: 1.4px;
+    background-color: #95989A; }
+    @media screen and (max-width: 640px) {
+      .site-header__logo-line {
+        display: none; } }
+  .site-header__logo-caption {
+    font-family: "Book Antiqua", 'Merriweather', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1rem;
+    color: #95989A;
+    padding-top: 2px;
+    -webkit-margin-before: 0 !important;
+    -webkit-margin-after: 0 !important; }
+    @media screen and (max-width: 640px) {
+      .site-header__logo-caption {
+        display: none; } }
+    @media screen and (max-width: 1200px) {
+      .site-header__logo-caption {
+        font-size: 0.8rem;
+        padding-top: 3px; } }
+  .site-header__blog-post-icon {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 30px;
+    right: 30px;
+    z-index: 10; }
+  .site-header__blog-post-content {
+    opacity: 0;
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .site-header__blog-post-content--is-visible {
+      opacity: 1;
+      z-index: 1; }
+  .site-header__blog-post-form {
+    flex-direction: column;
+    width: 60%; }
+    .site-header__blog-post-form--name {
+      height: 40px;
+      width: 100%;
+      margin-bottom: 30px; }
+    .site-header__blog-post-form--image {
+      height: 40px;
+      width: 100%;
+      margin-bottom: 30px; }
+    .site-header__blog-post-form--text {
+      height: 140px;
+      width: 100%; }
   .site-header__jumbotron {
     background: url("../images/skyscraper-large1.png") no-repeat center center;
     width: 100%;
