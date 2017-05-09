@@ -241,3 +241,32 @@ a {
     border-bottom: 2px solid #c0c0c0;
     width: 80%;
     margin: 15px auto; }
+
+form {
+  margin: 10px auto;
+  max-width: 400px;
+  padding: 20px 12px 10px 20px; }
+
+.form-group {
+  padding: 0;
+  display: block;
+  margin: 10px 0 0 0; }
+
+.form-control {
+  box-sizing: border-box;
+  border: 1px solid #BEBEBE;
+  padding: 7px;
+  margin: 0px;
+  outline: none; }
+
+.btn {
+  background: #007ACC;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  color: #fff; }
+
+.btn:hover {
+  background: #006bb3;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none; }
