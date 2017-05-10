@@ -12,7 +12,6 @@ PHP som är HTML
 * footer: sluta body & html-taggar (JavaScript ska länkas här)
 * header: HTML för header
 * form: HTML för en form för att skriva blog posts
-* loginform: form där man 
 
 ===INCLUDES===
 Här ska all annan PHP ligga
