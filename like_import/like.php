@@ -5,6 +5,8 @@ if(isset($_GET['type'], $_GET['id'])){
 	$type = $_GET['type'];
 	$id = (int)$_GET['id'];
 
+	/*
+	===OLD===
 	switch ($type) {
 		case 'article':
 			$db->query("
@@ -24,6 +26,29 @@ if(isset($_GET['type'], $_GET['id'])){
 				");
 			break;
 	}
+	*/
+	
+	/*===NEW===*/
+		switch ($type) {
+		case 'postID':
+			$db->query("
+				INSERT INTO likes (memberID, postID)
+					SELECT {$_SESSION['memberID']}, {$id}
+					FROM blog_posts
+					WHERE EXISTS (
+						SELECT postID
+						FROM blog_posts
+						WHERE postID = {$id})
+					AND NOT EXISTS (
+						SELECT id
+						FROM likes
+						WHERE memberID = {$_SESSION['memberID']}
+						AND postID = {$id})
+					LIMIT 1
+				");
+			break;
+	}
+	
 }
 header("Location: index.php");
 ?>

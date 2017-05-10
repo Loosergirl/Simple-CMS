@@ -3,38 +3,39 @@ require_once  'init.php';
 
 $articleQuery = $db->query("
 	SELECT 
-	articles.id, 
-	articles.title,
-	COUNT(articles_likes.id) AS likes,
+	blog_posts.postID, 
+	blog_posts.postTitle,
+	COUNT(likes.id) AS likes,
 	GROUP_CONCAT(users.username SEPARATOR '|') AS liked_by
 
-	FROM articles
+	FROM blog_posts
 
-	LEFT JOIN articles_likes
-	ON articles.id = articles_likes.article
+	LEFT JOIN likes
+	ON blog_posts.postID = likes.postID
 
 	LEFT JOIN users
-	ON articles_likes.user = users.id
+	ON likes.memberID = users.memberID
 
-	GROUP BY articles.id
+	GROUP BY blog_posts.postID
 	");
 
 while($row = $articleQuery->fetch_object()){
 	$row->liked_by = $row->liked_by ? explode('|', $row->liked_by) : [];
-	$articles[] = $row;
+	$blog_posts[] = $row;
 }
 
-// echo '<pre>', print_r($articles, true), '</pre>';
+// echo '<pre>', print_r($blog_posts, true), '</pre>';
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Articles</title>
+    <title>Blog Posts</title>
   </head>
   <body>
-  	<?php foreach($articles as $article): ?>
+  <!--Uhhhhh...?????-->
+  	<?php foreach($blog_posts as $article): ?>
   		<div class="article">
   			<h3><?php echo $article->title; ?></h3>
   			<a href="like.php?type=article&id=<?php echo $article->id; ?>">Like</a>
