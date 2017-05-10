@@ -2,6 +2,7 @@
 session_start();
 include '../dbconfig.php';
 include '../php-classes/Date.php';
+
 // ===== Get information from postForm.php =====
 $blogtitle = $_POST['blogtitle'];
 $blogtext = $_POST['blogtext'];
