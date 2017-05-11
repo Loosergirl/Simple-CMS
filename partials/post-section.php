@@ -1,6 +1,6 @@
 <?php
   include 'includes/getPosts.inc.php';
-
+  if (isset($_SESSION['memberID'])){
   foreach($row as $i) {
     ?>
     <div class="post-container">
@@ -20,4 +20,4 @@
 
     </div>
 <?php
-  }?>
+  }}?>
