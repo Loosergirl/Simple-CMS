@@ -26,7 +26,7 @@
     if (isset($_SESSION['memberID'])) {
       echo "You are already logged in.";
     } else {
-      echo  "<form action='includes/signup.inc.php' method='POST'>
+      echo  "<form action='../includes/signup.inc.php' method='POST'>
               <input type='text' name='username' placeholder='Username'><br>
               <input type='text' name='email' placeholder='Email'><br>
               <input type='password' name='password' placeholder='Password'><br>

@@ -18,4 +18,6 @@ $sql = "INSERT INTO blog_posts (postTitle, postCont, postDate, memberID, picture
 VALUES ('$blogtitle', '$blogtext', '$timestamp', '$member', '$figure')";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
+
+header("Location: ../index.php");
 ?>

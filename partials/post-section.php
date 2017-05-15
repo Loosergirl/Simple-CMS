@@ -1,9 +1,13 @@
 <?php
   include 'includes/getPosts.inc.php';
+  ?>
+
+  <div class="post-container">
+  <?php
   if (isset($_SESSION['memberID'])){
   foreach($row as $i) {
     ?>
-    <div class="post-container">
+
 
     <div class="post-container__post">
     <div class="wrapper__post">
@@ -18,6 +22,7 @@
     <div class="post-container__bottom-line"></div>
     </div>
 
-    </div>
+
 <?php
   }}?>
+    </div>
