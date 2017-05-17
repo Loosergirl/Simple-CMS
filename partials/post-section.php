@@ -1,5 +1,8 @@
 <?php
+  include 'dbconfig.php';
   include 'includes/getPosts.inc.php';
+
+
   ?>
 
   <div class="post-container">
@@ -11,6 +14,7 @@
 
     <div class="post-container__post">
     <div class="wrapper__post">
+      <p>Created by: <?= $i['memberID']; ?></p>
     <h2 class="post-container__header"><?= $i['postTitle']; ?></h2>
     <figure class="post-container__figure">
     <figcaption class="post-container__image-text"></figcaption>
