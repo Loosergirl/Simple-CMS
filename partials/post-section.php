@@ -1,5 +1,6 @@
 <?php
   include 'includes/getPosts.inc.php';
+  include 'includes/deletePost.inc.php';
   ?>
 
   <div class="post-container">
@@ -8,7 +9,12 @@
   foreach($row as $i) {
     ?>
 
-
+    <!-- foreach($ownderRow as $j) {
+    if ($ownderRow[j] == $row[i]) {
+    <button>Hej</button>
+  }
+  }
+-->
     <div class="post-container__post">
     <div class="wrapper__post">
     <h2 class="post-container__header"><?= $i['postTitle']; ?></h2>
@@ -19,6 +25,11 @@
     </figure>
     <p class="post-container__text"><?= $i['postCont']; ?></p>
     </div>
+    <?php
+          if ($ownerRow[0] == $_SESSION['memberID'] && $ownerRow[1] == $_SESSION[''] || $_SESSION['isAdmin'] == 1) {
+            ?>
+            <button>Hej</button>
+          <?php } ?>
     <div class="post-container__bottom-line"></div>
     </div>
 
