@@ -1,18 +1,12 @@
 <?php
+include '../dbconfig.php';
+include '../partials/post-section.php';
 
-$owner = $_SESSION['memberID'];
+$ID = $_GET['ID']; 
 
-$sql = "SELECT blog_posts.memberID, blog_posts.postID 
-FROM `blog_posts` 
-INNER JOIN `users` 
-ON blog_posts.memberID = users.memberID 
-WHERE blog_posts.memberID = '$owner'";
+$sql = "DELETE FROM `simple-cms`.`blog_posts` WHERE `blog_posts`.`postID` = '$ID'";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
-
-$ownerRow = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($ownerRow);
 
 ?>

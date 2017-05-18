@@ -1,22 +1,16 @@
 <?php
   include 'dbconfig.php';
   include 'includes/getPosts.inc.php';
-  include 'includes/deletePost.inc.php';
+  include 'includes/getPostID.inc.php';
+
 
   ?>
 
   <div class="post-container">
   <?php
-  if (isset($_SESSION['memberID'])){
   foreach($row as $i) {
     ?>
 
-    <!-- foreach($ownderRow as $j) {
-    if ($ownderRow[j] == $row[i]) {
-    <button>Hej</button>
-  }
-  }
--->
     <div class="post-container__post">
     <div class="wrapper__post">
       <p>Created by: <?= $i['memberID']; ?></p>
@@ -27,16 +21,16 @@
     <!--<input type="submit" class="post-container__like-button" value="">-->
     </figure>
     <p class="post-container__text"><?= $i['postCont']; ?></p>
-    </div>
     <?php
-          if ($ownerRow[0] == $_SESSION['memberID'] && $ownerRow[1] == $_SESSION[''] || $_SESSION['isAdmin'] == 1) {
-            ?>
-            <button>Hej</button>
-          <?php } ?>
+    if ($ownerRow['memberID'] == $i['memberID'] || $_SESSION['isAdmin'] == 1){ ?>
+      <a href="includes/deletePost.inc.php?ID=<?= $i['postID'] ?>">Delete</a>
+      <button>Edit</button>
+    <?php } ?>
+    </div>
     <div class="post-container__bottom-line"></div>
     </div>
 
 
 <?php
-  }}?>
+  }?>
     </div>
