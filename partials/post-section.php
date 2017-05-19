@@ -32,7 +32,7 @@
     if (isset($_SESSION['memberID'])) {
     if ($ownerRow['memberID'] == $i['memberID'] || $_SESSION['isAdmin'] == 1){ ?>
       <a href="includes/deletePost.inc.php?ID=<?= $i['postID'] ?>">Delete</a>
-      <a href="includes/sendToFrom.inc.php?ID=<?= $i['postID'] ?>">Edit</a>
+      <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>">Edit</a>
     <?php }} ?>
     </div>
 

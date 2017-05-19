@@ -10,5 +10,6 @@ WHERE `blog_posts`.`postID` = '$ID'";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
+
 header("Location: ../index.php");
 ?>
