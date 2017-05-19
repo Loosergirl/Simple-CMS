@@ -6,6 +6,8 @@ let like = (postID) => {
       url: '/Simple-CMS/partials/likeButton.php?postID=' + postID,
       success:(response) => {
         console.log("You liked the post!");
+
+
       }
     })
 }

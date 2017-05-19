@@ -1,20 +1,19 @@
 <?php
+  session_start();
+  ini_set("display_errors", 1);
   include 'dbconfig.php';
   include 'includes/getPosts.inc.php';
   include 'includes/getPostID.inc.php';
   include 'includes/likes.inc.php';
 
-
-
   $likes = new Likes($pdo);
-  $likerow = $likes->getAllLikes();
+  $allLikes = $likes->getAllLikes();
   ?>
 
   <div class="post-container">
   <?php
 
   foreach($row as $i) {?>
-
 
     <div class="post-container__post">
     <div class="wrapper__post">
@@ -24,8 +23,20 @@
     <figcaption class="post-container__image-text"></figcaption>
 
 
+    <?php
+
+      $count = 0;
+
+      foreach($allLikes as $like) {
+        if ($like['postID'] === $i['postID']) {
+          $count++;
+        }
+      }
+     ?>
+
     <!--<img class="post-container__image" src="" alt="Post-image">-->
     <a><button type="submit" class="post-container__likebtn" id="likebtn" onclick="like(<?= $i['postID']?>)">Like</button></a>
+    <p>Likes: <?php echo $count; ?></p>
     </figure>
     <p class="post-container__text"><?= $i['postCont']; ?></p>
     <?php
