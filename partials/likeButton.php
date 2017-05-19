@@ -5,7 +5,7 @@ include '../includes/likes.inc.php';
 $memberID = $_SESSION['memberID'];
 $postID = $_GET['postID'];
 $like = new Likes($pdo);
-echo $memberID;
+
 /*
 $isLiked = $like->getAllLikes();
 

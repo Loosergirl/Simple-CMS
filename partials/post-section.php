@@ -13,8 +13,6 @@
   <div class="post-container">
   <?php
 
-  if (isset($_SESSION['memberID'])){
-
   foreach($row as $i) {?>
 
 
