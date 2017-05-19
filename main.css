@@ -57,5 +57,5 @@ nav ul form button {
 .post-container__post {
   width: 20%;
   margin: 40px auto;
-
+  border: 1px solid salmon;
 }

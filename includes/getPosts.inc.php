@@ -1,9 +1,11 @@
 <?php
-session_start();
 include 'dbconfig.php';
 ini_set("display_errors", 1);
 
-$sql = "SELECT * FROM blog_posts ORDER BY postID DESC";
+$sql = "SELECT * FROM blog_posts
+        INNER JOIN users
+        ON blog_posts.memberID=users.memberID
+        ORDER BY postID DESC";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 
