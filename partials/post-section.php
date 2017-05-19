@@ -22,10 +22,11 @@
     </figure>
     <p class="post-container__text"><?= $i['postCont']; ?></p>
     <?php
+    if (isset($_SESSION['memberID'])) {
     if ($ownerRow['memberID'] == $i['memberID'] || $_SESSION['isAdmin'] == 1){ ?>
       <a href="includes/deletePost.inc.php?ID=<?= $i['postID'] ?>">Delete</a>
-      <button>Edit</button>
-    <?php } ?>
+      <a href="includes/sendToFrom.inc.php?ID=<?= $i['postID'] ?>">Edit</a>
+    <?php }} ?>
     </div>
     <div class="post-container__bottom-line"></div>
     </div>
