@@ -55,7 +55,7 @@
       }
      ?>
 
-    <!--<img class="post-container__image" src="" alt="Post-image">-->
+
     <div class="post-container__like-con">
     <a id="likebtn"><button type="submit" class="post-container__like-button" onclick="like(<?= $i['postID']?>);"></button></a>
     <p>Likes: <?php echo $count; ?></p>
