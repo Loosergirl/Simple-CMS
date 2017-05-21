@@ -19,7 +19,20 @@
 
     <div class="post-container__post">
     <div class="wrapper__post">
-      <p>Created by: <?= $i['username']; ?></p>
+    <div class="post-container__postHeader-con">
+    <p>Created by: <?= $i['username']; ?></p>
+
+    <?php
+    if (isset($_SESSION['memberID'])) {
+    if ($ownerRow['memberID'] == $i['memberID'] || $_SESSION['isAdmin'] == 1){ ?>
+      <a><button type="submit" class="post-container__buttonDelete" onclick="deletePost(<?= $i['postID']?>); location.reload();"><i class="fa fa-times" aria-hidden="true"></i>
+</button></a>
+      <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>"><button class="post-container__buttonEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+</button></a>
+      </div>
+    <?php }} ?>
+
+
     <h2 class="post-container__header"><?= $i['postTitle']; ?></h2>
     <figure class="post-container__figure"><img src="<?= $i['pictureSRC'] ?>"></figure>
     <figcaption class="post-container__image-text"></figcaption>
@@ -37,15 +50,11 @@
      ?>
 
     <!--<img class="post-container__image" src="" alt="Post-image">-->
-    <a><button type="submit" class="post-container__likebtn" id="likebtn" onclick="like(<?= $i['postID']?>); location.reload();">Like</button></a>
+    <div class="post-container__like-con">
+    <a><button type="submit" class="post-container__like-button" id="likebtn" onclick="like(<?= $i['postID']?>); location.reload();"></button></a>
     <p>Likes: <?php echo $count; ?></p>
+    </div>
     <p class="post-container__text"><?= $i['postCont']; ?></p>
-    <?php
-    if (isset($_SESSION['memberID'])) {
-    if ($ownerRow['memberID'] == $i['memberID'] || $_SESSION['isAdmin'] == 1){ ?>
-      <a><button type="submit" class="post-container__buttonDelete" onclick="deletePost(<?= $i['postID']?>); location.reload();">Delete</button></a>
-      <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>"><button class="post-container__buttonEdit">Edit</button></a>
-    <?php }} ?>
     </div>
 
     <div class="post-container__bottom-line"></div>

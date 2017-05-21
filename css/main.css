@@ -23,8 +23,8 @@ a {
   margin-left: auto;
   margin-right: auto; }
   .wrapper__post {
-    margin-left: auto;
-    margin-right: auto; }
+    margin-left: 5%;
+    margin-right: 5%; }
 
 .site-header {
   width: 100%;
@@ -215,9 +215,11 @@ a {
     font-size: 2rem;
     margin: 0; }
   .post-container__figure {
-    margin: 0; }
+    width: 100%;
+    margin: 0 auto; }
   .post-container__figure img {
-    margin: 0 25%; }
+    display: block;
+    margin: 0 auto; }
   .post-container__image-text {
     font-style: italic; }
   .post-container__image {
@@ -229,9 +231,11 @@ a {
     margin-right: auto; }
   .post-container__like-button {
     background: url(../images/like.svg) no-repeat;
+    display: inline-block;
     width: 30px;
     height: 30px;
     cursor: pointer;
+    margin-right: 1em;
     margin-top: 10px;
     border: none; }
   .post-container__text {
@@ -248,7 +252,7 @@ a {
     border-style: none;
     color: #000;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 26px;
     padding: 8px 18px;
     text-decoration: none; }
   .post-container__buttonDelete:hover {
@@ -259,8 +263,20 @@ a {
     border-style: none;
     color: #000;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 26px;
     padding: 8px 18px;
     text-decoration: none; }
   .post-container__buttonEdit:hover {
     color: green; }
+  .post-container__like-con {
+    display: flex;
+    flex-direction: row; }
+  .post-container__postHeader-con {
+    display: block;
+    width: 100%;
+    float: right; }
+  .post-container__postHeader-con p {
+    font-size: 14px;
+    padding: 8px 18px;
+    margin: 0;
+    float: left; }

@@ -14,11 +14,13 @@
   }
 
   &__figure {
-    margin: 0;
+    width: 100%;
+    margin: 0 auto;
 
   }
   &__figure img {
-    margin: 0 25%;
+    display: block;
+    margin: 0 auto;
 
   }
 
@@ -37,9 +39,11 @@
 
   &__like-button {
     background:url(../images/like.svg) no-repeat;
+    display: inline-block; 
     width: 30px;
     height: 30px;
     cursor: pointer;
+    margin-right: 1em;
     margin-top: 10px;
     border: none;
   }
@@ -61,7 +65,7 @@
     border-style: none;
     color:#000;
     font-family:Arial;
-    font-size:14px;
+    font-size:26px;
     padding:8px 18px;
     text-decoration:none;
   }  
@@ -74,11 +78,26 @@
     border-style: none;
     color:#000;
     font-family:Arial;
-    font-size:14px;
+    font-size:26px;
     padding:8px 18px;
     text-decoration:none;
 }  
 &__buttonEdit:hover {
     color: green;
+}
+&__like-con {
+  display: flex;
+  flex-direction: row;
+}
+&__postHeader-con {
+  display: block;
+  width: 100%;
+  float: right;
+}
+&__postHeader-con p{
+  font-size: 14px;
+  padding: 8px 18px;
+  margin: 0;
+  float: left;
 }
 }
