@@ -1,13 +1,32 @@
 .edit-page {
 
 &__form {
-	width: 50%;
+	width: 100%;
 }
 
+&__container {
+	width: 40%;
+	margin: 0 auto;
+}
+&__container2 {
+	width: 80%;
+	margin: 0 auto;
+}
 }
 
-input[type=text], select {
+input[type=text] {
     width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
