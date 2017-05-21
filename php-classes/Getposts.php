@@ -1,9 +1,7 @@
 <?php
 session_start();
-include 'dbconfig.php';
 ini_set("display_errors", 1);
-
-class Getposts {
+class Getpost {
 
   private $pdo;
 
@@ -16,7 +14,7 @@ class Getposts {
             INNER JOIN users
             ON blog_posts.memberID=users.memberID
             ORDER BY postID DESC";
-    $stmt = $pdo->prepare($sql);
+    $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,25 +30,13 @@ class Getposts {
     ON blog_posts.memberID = users.memberID
     WHERE blog_posts.memberID = '$owner'";
 
-    $stmt = $pdo->prepare($sql);
+    $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
-
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+   
+    return $stmt->fetch(PDO::FETCH_ASSOC);
   }
+}
 }
 
 
-
-/*
-$sql = "SELECT * FROM blog_posts
-        INNER JOIN users
-        ON blog_posts.memberID=users.memberID
-        ORDER BY postID DESC";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-
-$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
- ?>
-*/
 ?>

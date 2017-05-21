@@ -3,19 +3,18 @@
 
   include 'dbconfig.php';
   include 'php-classes/Getposts.php';
+  include 'php-classes/Likes.php';
   include 'includes/deletePost.inc.php';
-  //include 'includes/getPostID.inc.php';
-  include 'includes/likes.inc.php';
 
   $likes = new Likes($pdo);
       $allLikes = $likes->getAllLikes();
 
   $delete = new Deletes($pdo);
 
-
-  $posts = new Getposts($pdo);
+  $posts = new Getpost($pdo);
     $postRow = $posts->getPosts();
     $ownerRow = $posts->getPostId();
+
   ?>
 
   <div class="post-container">
@@ -64,7 +63,7 @@
     <p class="post-container__text"><?= $i['postCont']; ?></p>
     </div>
 
-    
+
     </div>
 
 
