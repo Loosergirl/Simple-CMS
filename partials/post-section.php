@@ -1,6 +1,6 @@
 <?php
   session_start();
- 
+
   include 'dbconfig.php';
   include 'includes/getPosts.inc.php';
   include 'includes/deletePost.inc.php';

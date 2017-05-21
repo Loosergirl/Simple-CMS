@@ -1,6 +1,8 @@
 <?php
   session_start();
-  include 'php-classes/header.php';
+  include 'partials/head.php';
+  include 'partials/header.php';
+  //include 'php-classes/header.php';
   include 'partials/postForm.php';
   include 'partials/post-section.php';
  ?>

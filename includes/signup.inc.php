@@ -1,6 +1,7 @@
 <?php
 session_start();
 include '../dbconfig.php';
+include 'login.inc.php';
 // ===== Gets information from Sign up form (signup.php). =====
 $username = $_POST['username'];
 $email = $_POST['email'];
