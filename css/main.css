@@ -23,7 +23,6 @@ a {
   margin-left: auto;
   margin-right: auto; }
   .wrapper__post {
-    width: 85%;
     margin-left: auto;
     margin-right: auto; }
 
@@ -217,6 +216,8 @@ a {
     margin: 0; }
   .post-container__figure {
     margin: 0; }
+  .post-container__figure img {
+    margin: 0 25%; }
   .post-container__image-text {
     font-style: italic; }
   .post-container__image {
