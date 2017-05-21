@@ -20,10 +20,10 @@
                     <a href='includes/logout.inc.php' class='site-header__listItem site-header__red'>Log Out</a>
                   </form>";
             } else {
-            echo "<form class='site-header__form' method='post'>
+            echo "<form class='site-header__form' action='includes/login.inc.php' method='post'>
                     <input type='text' name='username' placeholder='Username'>
                     <input type='password' name='password' placeholder='Password'>
-                    <a href='includes/logout.inc.php' class='site-header__listItem site-header__red'>Log Out</a>
+                    <button class='site-header__button site-header__listItem ' type='submit'>Log In</button>
                   </form>";
             }
 

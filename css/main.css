@@ -211,6 +211,15 @@ a {
       width: 100%; }
   .site-header__form {
     width: 70%; }
+  .site-header__button {
+    border-style: none;
+    text-decoration: none;
+    color: #95989A;
+    font-size: 1.2rem;
+    font-family: 'Inconsolata', monospace;
+    background-color: transparent; }
+  .site-header__button:hover {
+    color: green; }
   .site-header__jumbotron {
     background: url("../images/skyscraper-large1.png") no-repeat center center;
     width: 100%;
@@ -292,12 +301,13 @@ a {
     flex-direction: row; }
   .post-container__postHeader-con {
     display: block;
-    margin-left: 6%;
     width: 100%; }
-  .post-container__postHeader-con p {
+  .post-container__postHeader-p {
     font-size: 14px;
-    padding: 8px 18px;
-    margin: 0; }
+    margin: 0 0 0 6%;
+    padding: 8px 18px; }
+  .post-container__postHeader-con p {
+    font-size: 14px; }
   @media screen and (min-width: 320px) {
     .post-container__figure img {
       max-width: 100%; } }

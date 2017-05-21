@@ -21,7 +21,7 @@
     <div class="wrapper__post">
     <div class="post-container__bottom-line"></div>
     <div class="post-container__postHeader-con">
-    <p>Created by: <?= $i['username']; ?></p>
+    <p class="post-container__postHeader-p">Created by: <?= $i['username']; ?></p>
 
     <?php
     if (isset($_SESSION['memberID'])) {
@@ -30,7 +30,7 @@
 </button></a>
       <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>"><button class="post-container__buttonEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 </button></a>
-      </div>
+    </div>
     <?php }} ?>
 
 
