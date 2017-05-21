@@ -35,7 +35,7 @@
      ?>
 
     <!--<img class="post-container__image" src="" alt="Post-image">-->
-    <a><button type="submit" class="post-container__likebtn" id="likebtn" onclick="like(<?= $i['postID']?>)">Like</button></a>
+    <a><button type="submit" class="post-container__likebtn" id="likebtn" onclick="like(<?= $i['postID']?>); location.reload();">Like</button></a>
     <p>Likes: <?php echo $count; ?></p>
     </figure>
     <p class="post-container__text"><?= $i['postCont']; ?></p>
