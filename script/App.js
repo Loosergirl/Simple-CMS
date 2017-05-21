@@ -10442,27 +10442,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var postMenu = new _PostMenu2.default();
 var menuIcon = new _MenuIcon2.default();
 
-var like = function like(postID) {
-  $.ajax({
-    method: 'POST',
-    data: postID,
-    url: '/Simple-CMS/partials/likeButton.php?postID=' + postID,
-    success: function success(response) {
-      console.log("You liked the post!");
-    }
-  });
-};
-
-var deletePost = function deletePost(postID) {
-  $.ajax({
-    method: 'POST',
-    data: postID,
-    url: '/Simple-CMS/partials/deleteButton.php?postID=' + postID,
-    success: function success(response) {
-      console.log("You deleted a post!");
-    }
-  });
-};
-
 /***/ })
 /******/ ]);

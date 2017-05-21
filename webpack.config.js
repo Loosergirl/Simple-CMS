@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
@@ -6,6 +7,13 @@ module.exports = {
     path: path.resolve(__dirname, "./script"),
     filename: "App.js"
   },
+  plugins: [
+         new webpack.ProvidePlugin({
+             $: "jquery",
+             jQuery: "jquery",
+             "window.jQuery": "jquery"
+         })
+     ],
   module: {
     loaders: [
       {
