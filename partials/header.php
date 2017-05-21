@@ -47,11 +47,7 @@
 
         <!--===== Menu opened by Blog-post icon =====-->
         <div class="site-header__blog-post-content">
-  
-          <form class="site-header__blog-post-form" action="index.html" method="post">
-            <input type="text" name="" value="Name" class="site-header__blog-post-form--name">
-            <input type="text" name="" value="Image src" class="site-header__blog-post-form--image">
-            <input type="text" name="" value="Blog text" class="site-header__blog-post-form--text">
+          <?php include 'postForm.php'; ?>
           </form>
         </div>
 
