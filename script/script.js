@@ -1,4 +1,3 @@
-
 let like = (postID) => {
     $.ajax({
       method: 'POST',
@@ -20,4 +19,3 @@ let deletePost = (postID) => {
       }
     })
 }
-

@@ -1,10 +1,8 @@
-//import MenuIcon from './modules/MenuIcon';
-//import PostMenu from './modules/PostMenu';
-//import AjaxLike from './modules/Likes';
+import MenuIcon from './modules/MenuIcon';
+import PostMenu from './modules/PostMenu';
 
-//var postMenu = new PostMenu();
-//var menuIcon = new MenuIcon();
-//var like = new AjaxLike();
+var postMenu = new PostMenu();
+var menuIcon = new MenuIcon();
 
 
 let like = (postID) => {
