@@ -2,10 +2,6 @@
   session_start();
   include 'partials/head.php';
   include 'partials/header.php';
-<<<<<<< HEAD
-  //include 'php-classes/header.php';
-=======
->>>>>>> cd056d7ebc7387767011877c99c116ad1ba677af
   include 'partials/postForm.php';
   include 'partials/post-section.php';
   include 'partials/footer.php';
