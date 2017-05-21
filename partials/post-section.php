@@ -1,13 +1,15 @@
 <?php
   session_start();
-  ini_set("display_errors", 1);
+ 
   include 'dbconfig.php';
   include 'includes/getPosts.inc.php';
+  include 'includes/deletePost.inc.php';
   include 'includes/getPostID.inc.php';
   include 'includes/likes.inc.php';
 
   $likes = new Likes($pdo);
   $allLikes = $likes->getAllLikes();
+  $delete = new Deletes($pdo);
   ?>
 
   <div class="post-container">
@@ -42,7 +44,7 @@
     <?php
     if (isset($_SESSION['memberID'])) {
     if ($ownerRow['memberID'] == $i['memberID'] || $_SESSION['isAdmin'] == 1){ ?>
-      <a href="includes/deletePost.inc.php?ID=<?= $i['postID'] ?>">Delete</a>
+      <a><button type="submit" onclick="deletePost(<?= $i['postID']?>); location.reload();">Delete</button></a>
       <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>">Edit</a>
     <?php }} ?>
     </div>
