@@ -218,6 +218,7 @@ a {
     width: 100%;
     margin: 0 auto; }
   .post-container__figure img {
+    max-width: 1080px;
     display: block;
     margin: 0 auto; }
   .post-container__image-text {
