@@ -10434,12 +10434,35 @@ var _MenuIcon = __webpack_require__(1);
 var _MenuIcon2 = _interopRequireDefault(_MenuIcon);
 
 var _PostMenu = __webpack_require__(2);
+
 var _PostMenu2 = _interopRequireDefault(_PostMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var postMenu = new _PostMenu2.default();
 var menuIcon = new _MenuIcon2.default();
+
+var like = function like(postID) {
+  $.ajax({
+    method: 'POST',
+    data: postID,
+    url: '/Simple-CMS/partials/likeButton.php?postID=' + postID,
+    success: function success(response) {
+      console.log("You liked the post!");
+    }
+  });
+};
+
+var deletePost = function deletePost(postID) {
+  $.ajax({
+    method: 'POST',
+    data: postID,
+    url: '/Simple-CMS/partials/deleteButton.php?postID=' + postID,
+    success: function success(response) {
+      console.log("You deleted a post!");
+    }
+  });
+};
 
 /***/ })
 /******/ ]);
