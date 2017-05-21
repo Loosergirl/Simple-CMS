@@ -2,20 +2,26 @@
   session_start();
 
   include 'dbconfig.php';
-  include 'includes/getPosts.inc.php';
+  include 'php-classes/Getposts.php';
   include 'includes/deletePost.inc.php';
-  include 'includes/getPostID.inc.php';
+  //include 'includes/getPostID.inc.php';
   include 'includes/likes.inc.php';
 
   $likes = new Likes($pdo);
-  $allLikes = $likes->getAllLikes();
+      $allLikes = $likes->getAllLikes();
+
   $delete = new Deletes($pdo);
+
+
+  $posts = new Getposts($pdo);
+    $postRow = $posts->getPosts();
+    $ownerRow = $posts->getPostId();
   ?>
 
   <div class="post-container">
   <?php
 
-  foreach($row as $i) {?>
+  foreach($postRow as $i) {?>
 
     <div class="post-container__post">
     <div class="wrapper__post">
@@ -51,7 +57,7 @@
 
     <!--<img class="post-container__image" src="" alt="Post-image">-->
     <div class="post-container__like-con">
-    <a><button type="submit" class="post-container__like-button" id="likebtn" onclick="like(<?= $i['postID']?>); location.reload();"></button></a>
+    <a id="likebtn"><button type="submit" class="post-container__like-button" onclick="like(<?= $i['postID']?>);"></button></a>
     <p>Likes: <?php echo $count; ?></p>
     </div>
     <p class="post-container__text"><?= $i['postCont']; ?></p>

@@ -11,29 +11,24 @@
 The Purpose of this assignment is to create a CMS using PHP and mySQL.
 
 ### Software we are using for the project are:
-```
+
 [HTML](https://en.wikipedia.org/wiki/HTML) and [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - For markdown and styling
-```
-```
+
 [Javascript](https://en.wikipedia.org/wiki/JavaScript) with [jQuery](https://jquery.com/) - For animation and functionality
-```
-```
+
 [PHP](http://php.net/) - For connecting and communicating with the database
-```
-```
+
 [Gulp](http://gulpjs.com/) - For SASS, Babel, jQuery and File Management
-```
+
 
 ### Tools to improve the workflow:
-```
+
 [Slack](https://slack.com/) - For communicating
-```
-```
+
 [Trello](https://trello.com/) - Create lists online on things to do
-```
-```
+
 [Github](https://github.com/) - Version Control
-```
+
 
 ## Functionality
 We have chosen to make a blogpost system for users to write their own blog-posts and share them. The user should be able to create a new user, login/logout, write blogposts and delete/edit blogposts. Admin can delete and edit all users posts. Non-Admin users can only delete and edit their own posts.
