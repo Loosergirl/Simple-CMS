@@ -25,6 +25,18 @@ a {
   .wrapper__post {
     margin-left: 5%;
     margin-right: 5%; }
+  @media screen and (min-width: 360px) {
+    .wrapper__post {
+      margin-left: 0%;
+      margin-right: 0%; } }
+  @media screen and (min-width: 640px) {
+    .wrapper__post {
+      margin-left: 0%;
+      margin-right: 0%; } }
+  @media screen and (min-width: 1200px) {
+    .wrapper__post {
+      margin-left: 0%;
+      margin-right: 0%; } }
 
 .site-header {
   width: 100%;
@@ -206,7 +218,7 @@ a {
   display: block;
   max-width: 1200px;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #fff;
   margin-left: auto;
   margin-right: auto; }
   .post-container__header {
@@ -218,6 +230,7 @@ a {
     width: 100%;
     margin: 0 auto; }
   .post-container__figure img {
+    max-width: 1080px;
     display: block;
     margin: 0 auto; }
   .post-container__image-text {
@@ -269,14 +282,65 @@ a {
   .post-container__buttonEdit:hover {
     color: green; }
   .post-container__like-con {
+    margin-left: 5em;
     display: flex;
     flex-direction: row; }
   .post-container__postHeader-con {
     display: block;
-    width: 100%;
-    float: right; }
+    width: 100%; }
   .post-container__postHeader-con p {
     font-size: 14px;
     padding: 8px 18px;
-    margin: 0;
-    float: left; }
+    margin: 0; }
+  @media screen and (min-width: 320px) {
+    .post-container__figure img {
+      max-width: 100%; } }
+  @media screen and (min-width: 640px) {
+    .post-container__figure img {
+      max-width: 640px; } }
+  @media screen and (min-width: 1200px) {
+    .post-container__figure img {
+      max-width: 1200px; } }
+
+.edit-page__form {
+  width: 50%; }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+input[type=url] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+input[type=submit]:hover {
+  background-color: #45a049; }
