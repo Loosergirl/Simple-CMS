@@ -242,3 +242,25 @@ a {
     border-bottom: 2px solid #c0c0c0;
     width: 80%;
     margin: 15px auto; }
+  .post-container__buttonDelete {
+    background-color: transparent;
+    cursor: pointer;
+    border-style: none;
+    color: #000;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none; }
+  .post-container__buttonDelete:hover {
+    color: red; }
+  .post-container__buttonEdit {
+    background-color: transparent;
+    cursor: pointer;
+    border-style: none;
+    color: #000;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none; }
+  .post-container__buttonEdit:hover {
+    color: green; }

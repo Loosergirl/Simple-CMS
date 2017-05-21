@@ -55,5 +55,30 @@
     width: 80%;
     margin: 15px auto;
   }
-
+  &__buttonDelete {
+    background-color:transparent;
+    cursor:pointer;
+    border-style: none;
+    color:#000;
+    font-family:Arial;
+    font-size:14px;
+    padding:8px 18px;
+    text-decoration:none;
+  }  
+  &__buttonDelete:hover {
+    color: red;
+  }
+  &__buttonEdit {
+    background-color:transparent;
+    cursor:pointer;
+    border-style: none;
+    color:#000;
+    font-family:Arial;
+    font-size:14px;
+    padding:8px 18px;
+    text-decoration:none;
+}  
+&__buttonEdit:hover {
+    color: green;
+}
 }

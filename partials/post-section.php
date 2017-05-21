@@ -43,8 +43,8 @@
     <?php
     if (isset($_SESSION['memberID'])) {
     if ($ownerRow['memberID'] == $i['memberID'] || $_SESSION['isAdmin'] == 1){ ?>
-      <a><button type="submit" onclick="deletePost(<?= $i['postID']?>); location.reload();">Delete</button></a>
-      <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>">Edit</a>
+      <a><button type="submit" class="post-container__buttonDelete" onclick="deletePost(<?= $i['postID']?>); location.reload();">Delete</button></a>
+      <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>"><button class="post-container__buttonEdit">Edit</button></a>
     <?php }} ?>
     </div>
 
