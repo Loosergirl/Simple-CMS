@@ -88,9 +88,14 @@
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
   }
-
+  &__red:hover {
+    color: red;
+  }
+  &__green:hover {
+    color: green;
+  }
   &__listItem {
     font-family: 'Inconsolata', monospace;
     font-size: 1.5rem;
@@ -120,9 +125,11 @@
       margin: 0;
       -webkit-margin-after: 0 !important;
       color: $mainGrey;
+      text-align: center;
 
       @media screen and (min-width: $atSmall) {
           font-size: 1rem;
+
       }
       @media screen and (min-width: $atMedium) {
           font-size: 1.5rem;
@@ -146,13 +153,11 @@
       font-weight: 400;
       font-style: italic;
       font-size: 1rem;
+      text-align: center;
       color: $mainGrey;
       padding-top: 2px;
       -webkit-margin-before: 0 !important;
       -webkit-margin-after: 0 !important;
-      @media screen and (max-width: $atMedium) {
-          display: none;
-      }
       @media screen and (max-width: $atLarge) {
         font-size: 0.8rem;
         padding-top: 3px;
@@ -209,6 +214,9 @@
         height: 140px;
         width: 100%;
       }
+    }
+    &__form {
+      width: 70%;
     }
 
     &__jumbotron {

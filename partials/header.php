@@ -16,19 +16,19 @@
 
           //This is how you can decide which user can do what. For example in the If statement you can put admin stuff and in the else the not admin stuff
             if (isset($_SESSION['memberID'])) {
-            echo "<form action='includes/logout.inc.php' method='post'>
-                    <button>Log Out</button>
+            echo "<form method='post'>
+                    <a href='includes/logout.inc.php' class='site-header__listItem site-header__red'>Log Out</a>
                   </form>";
             } else {
-            echo "<form action='includes/login.inc.php' method='post'>
+            echo "<form class='site-header__form' method='post'>
                     <input type='text' name='username' placeholder='Username'>
                     <input type='password' name='password' placeholder='Password'>
-                    <button type='submit'>Login</button>
+                    <a href='includes/logout.inc.php' class='site-header__listItem site-header__red'>Log Out</a>
                   </form>";
             }
 
           ?>
-            <li class="site-header__listItem"><a href="/Simple-CMS/php-classes/signup.php">Sign Up</a></li>
+            <li class="site-header__listItem"><a class="site-header__green" href="/Simple-CMS/php-classes/signup.php">Sign Up</a></li>
           </ul>
         </nav>
       </div>
