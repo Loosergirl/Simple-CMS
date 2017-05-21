@@ -14,12 +14,15 @@ The Purpose of this assignment is to learn how and create a blog using mostly PH
 ```
 HTML and CSS (For markdown and styling)
 ```
+```
 Javascript with Jquery (For animation and functionality)
+```
 ```
 PHP (For connecting and communicating with the database)
 ```
+```
 Gulp (For SASS, Babel and File Management)
-``
+```
 
 ##Functionality
-The user should be able to create a new user, login and logout, write blogposts and remove/edit blogposts.
+The user should be able to create a new user, login/logout, write blogposts and delete/edit blogposts. Admin can delete and edit all users posts. The ordinary user can
