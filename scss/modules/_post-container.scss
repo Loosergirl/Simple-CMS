@@ -2,7 +2,7 @@
   display: block;
   max-width: 1200px;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #fff;
   margin-left: auto;
   margin-right: auto;
 
@@ -86,18 +86,17 @@
     color: green;
 }
 &__like-con {
+  margin-left: 5em;
   display: flex;
   flex-direction: row;
 }
 &__postHeader-con {
   display: block;
   width: 100%;
-  float: right;
 }
 &__postHeader-con p{
   font-size: 14px;
   padding: 8px 18px;
   margin: 0;
-  float: left;
 }
 }

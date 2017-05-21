@@ -19,6 +19,7 @@
 
     <div class="post-container__post">
     <div class="wrapper__post">
+    <div class="post-container__bottom-line"></div>
     <div class="post-container__postHeader-con">
     <p>Created by: <?= $i['username']; ?></p>
 
@@ -57,7 +58,7 @@
     <p class="post-container__text"><?= $i['postCont']; ?></p>
     </div>
 
-    <div class="post-container__bottom-line"></div>
+    
     </div>
 
 

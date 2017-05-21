@@ -206,7 +206,7 @@ a {
   display: block;
   max-width: 1200px;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #fff;
   margin-left: auto;
   margin-right: auto; }
   .post-container__header {
@@ -269,14 +269,13 @@ a {
   .post-container__buttonEdit:hover {
     color: green; }
   .post-container__like-con {
+    margin-left: 5em;
     display: flex;
     flex-direction: row; }
   .post-container__postHeader-con {
     display: block;
-    width: 100%;
-    float: right; }
+    width: 100%; }
   .post-container__postHeader-con p {
     font-size: 14px;
     padding: 8px 18px;
-    margin: 0;
-    float: left; }
+    margin: 0; }
