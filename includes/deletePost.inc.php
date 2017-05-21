@@ -1,15 +1,18 @@
-<?php
-include '../dbconfig.php';
-include '../partials/post-section.php';
+<?php 
+class Deletes {
 
-$ID = $_GET['ID']; 
+	private $pdo;
 
-$sql = "
-DELETE FROM `simple-cms`.`blog_posts` 
-WHERE `blog_posts`.`postID` = '$ID'";
+	public function __construct($pdo) {
+    	$this->pdo = $pdo;
+  	}
 
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-
-header("Location: ../index.php");
+  	public function deletePost($postID) {
+    	$sql = "
+		DELETE FROM `simple-cms`.`blog_posts` 
+		WHERE `blog_posts`.`postID` = '$postID'";
+    	$stmt = $this->pdo->prepare($sql);
+    	$stmt->execute();
+  	}	
+}
 ?>
