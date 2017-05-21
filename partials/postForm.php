@@ -9,7 +9,7 @@
 		    <input type="text" name="blogtitle" required placeholder="Write Title..">
 		    <textarea type="text" name="blogtext" required placeholder="Write Post..."></textarea>
 		    <input type="url" name="figure" required placeholder="Picture url">
-		    <button type="submit">Post</button>
+		    <button type="submit" class="site-header__button">Post</button>
 		</form>
 	</div>
  <?php }

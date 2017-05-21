@@ -180,7 +180,11 @@ a {
     top: 30px;
     right: 30px;
     z-index: 10; }
+    .site-header__blog-post-icon i {
+      transform: rotate(20deg) scaleX(1.25); }
   .site-header__blog-post-content {
+    transform: scale(1.2);
+    transition: all .3s ease-out;
     opacity: 0;
     z-index: -10;
     position: fixed;
@@ -194,7 +198,8 @@ a {
     align-items: center; }
     .site-header__blog-post-content--is-visible {
       opacity: 1;
-      z-index: 1; }
+      z-index: 1;
+      transform: scale(1); }
   .site-header__blog-post-form {
     flex-direction: column;
     width: 60%; }

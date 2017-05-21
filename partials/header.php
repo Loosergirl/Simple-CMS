@@ -42,9 +42,13 @@
         </div>
 
         <!--===== Blog-post icon at top right of page =====-->
-        <div class="site-header__blog-post-icon">
-          <i class="fa fa-thumb-tack fa-2x" aria-hidden="true"></i>
-        </div>
+        <?php
+        if (isset($_SESSION['memberID'])) {
+          echo "<div class='site-header__blog-post-icon'>
+                    <i class='fa fa-thumb-tack fa-2x' aria-hidden='true'></i>
+                  </div>";
+        }?>
+
 
         <!--===== Menu opened by Blog-post icon =====-->
         <div class="site-header__blog-post-content">
