@@ -11,12 +11,27 @@
         <div class="site-header__menu-content">
           <nav class="site-header__nav">
             <ul class="site-header__list">
-              <li class="site-header__listItem"><a href="blog.php">Blog</a></li>
-              <li class="site-header__listItem"><a href="contact.php">Contact</a></li>
-              <li class="site-header__listItem"><a href="loginpage.php">Register / Log in</a></li>
-            </ul>
-          </nav>
-        </div>
+            <li class="site-header__listItem"><a href="/Simple-CMS/index.php">Blog</a></li>
+            <?php
+
+          //This is how you can decide which user can do what. For example in the If statement you can put admin stuff and in the else the not admin stuff
+            if (isset($_SESSION['memberID'])) {
+            echo "<form action='includes/logout.inc.php' method='post'>
+                    <button>Log Out</button>
+                  </form>";
+            } else {
+            echo "<form action='includes/login.inc.php' method='post'>
+                    <input type='text' name='username' placeholder='Username'>
+                    <input type='password' name='password' placeholder='Password'>
+                    <button type='submit'>Login</button>
+                  </form>";
+            }
+
+          ?>
+            <li class="site-header__listItem"><a href="/Simple-CMS/php-classes/signup.php">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
 
         <!--===== Main logo at top center of page =====-->
         <div class="site-header__logo">
