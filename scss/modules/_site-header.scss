@@ -218,7 +218,17 @@
     &__form {
       width: 70%;
     }
-
+    &__button {
+      border-style: none;
+      text-decoration: none;
+      color: #95989A;
+      font-size: 1.2rem;
+      font-family: 'Inconsolata', monospace;
+      background-color: transparent;
+    }
+    &__button:hover {
+      color: green;
+    }
     &__jumbotron {
       background: url("../images/skyscraper-large1.png") no-repeat center center;
       width: 100%;
