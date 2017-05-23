@@ -179,9 +179,10 @@ a {
     width: 30px;
     top: 30px;
     right: 30px;
-    z-index: 10; }
-    .site-header__blog-post-icon i {
-      transform: rotate(20deg) scaleX(1.25); }
+    z-index: 10;
+    transform: rotate(10deg) scaleX(1.25); }
+    .site-header__blog-post-icon--rotate {
+      transform: rotate(40deg) scaleX(1.25); }
   .site-header__blog-post-content {
     transform: scale(1.2);
     transition: all .3s ease-out;
@@ -226,7 +227,7 @@ a {
   .site-header__button:hover {
     color: green; }
   .site-header__jumbotron {
-    background: url("../images/skyscraper-large1.png") no-repeat center center;
+    background: url("../images/forest.png") no-repeat center center;
     width: 100%;
     height: 760px;
     display: inline-block;
@@ -306,10 +307,10 @@ a {
     flex-direction: row; }
   .post-container__postHeader-con {
     display: block;
-    width: 100%; }
+    width: 100%;
+    margin-left: 6%; }
   .post-container__postHeader-p {
     font-size: 14px;
-    margin: 0 0 0 6%;
     padding: 8px 18px; }
   .post-container__postHeader-con p {
     font-size: 14px; }

@@ -3,7 +3,7 @@
   include 'dbconfig.php';
   include 'php-classes/Getposts.php';
   include 'php-classes/Likes.php';
-  include 'includes/deletePost.inc.php';
+  include 'php-classes/deletePost.php';
 
   $likes = new Likes($pdo);
       $allLikes = $likes->getAllLikes();
@@ -56,7 +56,7 @@
 
 
     <div class="post-container__like-con">
-    <a id="likebtn"><button type="submit" class="post-container__like-button" onclick="like(<?= $i['postID']?>);"></button></a>
+    <a id="likebtn"><button type="submit" class="post-container__like-button" onclick="like(<?= $i['postID']?>); location.reload();"></button></a>
     <p>Likes: <?php echo $count; ?></p>
     </div>
     <p class="post-container__text"><?= $i['postCont']; ?></p>
