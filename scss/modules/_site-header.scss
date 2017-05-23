@@ -1,6 +1,7 @@
 .site-header {
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
+  position: fixed;
 
     &__menu-icon {
       position: absolute;
@@ -239,9 +240,9 @@
     &__jumbotron {
       background: url("../images/forest.png") no-repeat center center;
       width: 100%;
-      height: 760px;
+      height: 768px;
       display: inline-block;
-      top: 0;
+      margin-top: 100px;
       z-index: -1;
         }
     /*&__bottom-line {
