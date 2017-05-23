@@ -36,9 +36,7 @@
 
         <!--===== Main logo at top center of page =====-->
         <div class="site-header__logo">
-            <h1 class="site-header__logo-header-text">Architecture</h1>
-            <div class="site-header__logo-line"></div>
-            <p class="site-header__logo-caption">Crazy building styles</p>
+            <h1 class="site-header__logo-header-text">EcoArchitecture</h1>
         </div>
 
         <!--===== Blog-post icon at top right of page =====-->
