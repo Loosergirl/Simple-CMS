@@ -34,10 +34,9 @@
 </button></a>
       <a href="includes/sendToForm.inc.php?ID=<?= $i['postID'] ?>"><button class="post-container__buttonEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 </button></a>
-    </div>
     <?php }} ?>
 
-
+</div>
     <h2 class="post-container__header"><?= $i['postTitle']; ?></h2>
     <figure class="post-container__figure"><img src="<?= $i['pictureSRC'] ?>"></figure>
     <figcaption class="post-container__image-text"></figcaption>

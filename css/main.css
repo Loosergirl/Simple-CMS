@@ -311,10 +311,29 @@ a {
     margin-left: 5em;
     display: flex;
     flex-direction: row; }
+  @media screen and (min-width: 320px) {
+    .post-container__like-con {
+      margin-left: 5.5%; } }
+  @media screen and (min-width: 640px) {
+    .post-container__like-con {
+      margin-left: 5em; } }
+  @media screen and (min-width: 1200px) {
+    .post-container__like-con {
+      margin-left: 5em; } }
   .post-container__postHeader-con {
     display: block;
-    width: 100%;
-    margin-left: 6%; }
+    width: auto;
+    margin: 0 6%;
+    overflow: hidden; }
+  @media screen and (min-width: 320px) {
+    .post-container__postHeader-con {
+      margin: 0 2%; } }
+  @media screen and (min-width: 640px) {
+    .post-container__postHeader-con {
+      margin: 0 6%; } }
+  @media screen and (min-width: 1200px) {
+    .post-container__postHeader-con {
+      margin: 0 6%; } }
   .post-container__postHeader-p {
     font-size: 14px;
     padding: 8px 18px; }
