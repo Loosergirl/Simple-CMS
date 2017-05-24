@@ -16,7 +16,7 @@
   &__figure {
     width: 100%;
     margin: 0 auto;
-
+    max-width: 1080px;
   }
   &__figure img {
     max-width: 1080px;
@@ -40,7 +40,7 @@
 
   &__like-button {
     background:url(../images/like.svg) no-repeat;
-    display: inline-block; 
+    display: inline-block;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -77,7 +77,7 @@
     font-size:26px;
     padding:8px 18px;
     text-decoration:none;
-  }  
+  }
   &__buttonDelete:hover {
     color: red;
   }
@@ -90,7 +90,7 @@
     font-size:26px;
     padding:8px 18px;
     text-decoration:none;
-}  
+}
 &__buttonEdit:hover {
     color: green;
 }
