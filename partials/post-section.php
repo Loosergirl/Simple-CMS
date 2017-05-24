@@ -55,7 +55,10 @@
 
 
     <div class="post-container__like-con">
-    <a id="likebtn"><button type="submit" class="post-container__like-button" onclick="like(<?= $i['postID']?>); location.reload();"></button></a>
+
+      <?php if (isset($_SESSION['memberID'])) { ?>
+        <a id='likebtn'><button type='submit' class='post-container__like-button' onclick='like(<?= $i['postID']?>); location.reload();'></button></a>
+    <?php } ?>
     <p>Likes: <?php echo $count; ?></p>
     </div>
     <p class="post-container__text"><?= $i['postCont']; ?></p>

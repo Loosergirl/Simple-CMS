@@ -195,8 +195,8 @@ a {
     position: absolute;
     height: 30px;
     width: 30px;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     z-index: 10;
     transform: rotate(10deg) scaleX(1.25); }
     .site-header__blog-post-icon--rotate {
@@ -449,3 +449,6 @@ input[type=url] {
 
 input[type=submit]:hover {
   background-color: #45a049; }
+
+.signup-form {
+  text-align: center; }

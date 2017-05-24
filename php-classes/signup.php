@@ -14,11 +14,6 @@
       echo "Username already exist.";
     }
 
-    if (isset($_SESSION['memberID'])) {
-      echo $_SESSION['memberID'];
-    } else {
-      echo "You are not logged in.";
-    }
     ?>
     <br><br>
     <?php
@@ -26,12 +21,15 @@
     if (isset($_SESSION['memberID'])) {
       echo "You are already logged in.";
     } else {
-      echo  "<form action='../includes/signup.inc.php' method='POST'>
-              <input type='text' name='username' placeholder='Username'><br>
-              <input type='text' name='email' placeholder='Email'><br>
-              <input type='password' name='password' placeholder='Password'><br>
-              <button type='submit'>Sign Up</button>
-            </form>";
+      echo  "<div class='signup-form'>
+                <h1>Welcome to signup</h1>
+                  <form action='../includes/signup.inc.php' method='POST' class='signup__form'><br>
+                  <input type='text' name='username' placeholder='Username' class='signup__form--field'><br>
+                  <input type='text' name='email' placeholder='Email' class='signup__form--field'><br>
+                  <input type='password' name='password' placeholder='Password' class='signup__form--field'><br>
+                  <button type='submit'>Sign Up</button>
+            </form>
+            </div>";
     }
     ?>
 
